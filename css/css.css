@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+#layout{max-width: 500px; border:1px solid transparent; 
+    margin: auto; position: relative;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 10pt; line-height: 190%; height:100dvh}
+img{max-width: 100%;}
+:root{--main:#499b00; --sub:#e2ef97;}
+
+header{display: flex; 
+    background-color: var(--main);}
+
+header button{border:none; margin:7px; background: none; color:white}
+
+header h1{left:27%; font-family:'Gugi',cursive;
+    position: relative; padding:15px; margin-top:5px; color:white;}
+
+#menu{list-style-position: inside; width:500px; height:0;  overflow: hidden;                             
+        background: white; position: absolute; transition: 1s }
+#menu li::marker {color:var(--main);}
+#menu li{ margin:1px 2px 1px 2px; padding:30px;
+    
+    border-bottom: 1px solid rgba(146, 140, 140, 0.55);}
+
+#menu li a{text-decoration: none; color:black}    
+
+main>div{margin: 15px 10px 30px 10px;}
+section b{margin-left: 10px;}
+section p{margin-left: 10px;}
+
+main div b{font-family: 'Gugi',cursive; line-height: 300%;}
+main p::first-letter{font-size: 1.5rem; font-weight: bold; color:var(--main)}
+
+#main1 img {width:20%; float:right;}
+#main2 img {align-items:left; width:50%}
+#main2>div {position: block;}
+#main2 ol {float: right; color:var(--main); }
+#main2 p {position: block;}
+
+#main3 img{border-radius: 5%; box-shadow: 0 0 10px gray;}
+
+#main4 img{width:20%; float:left; margin-right: 10px;}
+
+section{background: var(--sub);}
+section b::before{content:url(../images/bullet.png); margin-right: 3px;}
+section b{font-family: 'Gugi',cursive; font-size: 1rem;}
+
+footer{background: gray; text-align: center;}
+
+#layout>a{background: white; position: fixed; right:calc((100% - 435px) / 2); bottom:1vh;
+     padding:3px 8px 3px 8px; border:1px solid gray; transform: translateX(100%); 
+    box-shadow: 0 0 5px gray;  border-radius: 10%; text-decoration: none;}
+
+
+@media(max-width: 500px){
+    #layout>a {right:40px;}
+
+}
